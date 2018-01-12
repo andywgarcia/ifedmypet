@@ -9,7 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon-paw.ico"
       ],
       "index": "index.html",
       "main": "main.ts",

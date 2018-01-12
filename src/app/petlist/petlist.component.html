@@ -1,0 +1,7 @@
+<ul>
+  <div *ngFor="let pet of petsObservable | async">
+      <ngb-alert type="info" [dismissible]="false">
+          <h3>My {{pet.type}}'s name is {{pet.name}} and {{getGenderPronoun(pet)}} is {{pet.age}} years old</h3>
+      </ngb-alert> 
+  </div>
+</ul>
