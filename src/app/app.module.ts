@@ -15,11 +15,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 /* Components */
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { CoursesListComponent } from './courses-list/courses-list.component';
 import { PetlistComponent } from './petlist/petlist.component';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -37,13 +36,6 @@ const appRoutes: Routes = [
     } 
   },
   { 
-    path: 'firebaseExample', 
-    component: CoursesListComponent,
-    data: { 
-      title: "Firebase Example"
-    } 
-  },
-  { 
     path: 'pets', 
     component: PetlistComponent,
     data: { 
@@ -51,7 +43,11 @@ const appRoutes: Routes = [
     } 
   },
   {
-    path: '**', component: PageNotFoundComponent 
+    path: '**', 
+    component: ErrorComponent,
+    data: {
+      title: "Error"
+    } 
   }
 ];
 
@@ -59,11 +55,10 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     AboutComponent,
-    PageNotFoundComponent,
     HomeComponent,
     NavBarComponent,
-    CoursesListComponent,
-    PetlistComponent
+    PetlistComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
