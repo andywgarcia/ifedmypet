@@ -1,0 +1,51 @@
+@import '../globalstyles/colorscheme.scss';
+$default-padding: 8px;
+$bottom-margin: 50px;
+$top-margin: 75px;
+$navbar-width: 50px;
+$icon-spacing: 8px;
+
+.side-navbar-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: $secondary-color-1;
+    padding-top: $default-padding;
+    width: $navbar-width;
+
+    nav.side-navbar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: $navbar-width;
+        background-color: $primary-color-2;
+
+        .upper-icons {
+            margin-top: $top-margin;
+        }
+        
+        .lower-icons {
+            bottom: 0;
+            position: absolute;
+            margin-bottom: 25px;
+            width: 50px;
+            text-align: center;
+        }
+        .icon {
+            margin-top: $icon-spacing;
+        }
+        :focus {
+            outline: 0;
+        }
+    }
+    
+    .menu-toggler {
+        z-index: 1000; 
+        position: absolute;
+        width: 50px;
+        text-align: center;
+    }
+}
